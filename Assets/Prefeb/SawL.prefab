@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 2038889023883094796}
   - component: {fileID: 2038889023883094795}
   - component: {fileID: 1803524195772186758}
+  - component: {fileID: -2008416512284623741}
   m_Layer: 0
-  m_Name: Saw
+  m_Name: SawL
   m_TagString: Saw
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -115,8 +116,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec1dfff51e20b5b4586acc746e6a138a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minPos: 1
-  maxPos: 1
+  minPos: 3
+  maxPos: 3
 --- !u!114 &1803524195772186758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,3 +130,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4819303201c7179449d0882ae3d99f43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &-2008416512284623741
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038889023883094794}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4

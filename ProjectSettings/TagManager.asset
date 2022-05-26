@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Wall
   - CTrigger
+  - Saw
+  - SawTrigger
   layers:
   - Default
   - TransparentFX
