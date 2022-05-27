@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerDead : MonoBehaviour
 {
-    private HP playerhp = new HP();
-    private SpriteRenderer sr;
+    private HP playerhp = new HP(); //Hp 클래스 객체 생성
+    private SpriteRenderer sr; // 플레이어 투명도 조정을 위한 스프라이트 렌더러 컴포넌트
 
     public void Start()
     {
@@ -33,12 +33,13 @@ public class PlayerDead : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(5f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        HP.hp = 3;
         Time.timeScale = 1;
     }
     private IEnumerator Infinity()
     {
         sr.color = new Color(255,255,255,0.5f);
-        yield return new WaitForSecondsRealtime(2.0f);
+        yield return new WaitForSeconds(2.0f);
         sr.color = new Color(255, 255, 255, 255);
     }
 }
