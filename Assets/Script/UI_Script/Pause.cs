@@ -24,11 +24,13 @@ public class Pause : MonoBehaviour
         if (!onpaulse)
         {
             Time.timeScale = 0;
+            onpaulse = true;
             pause_UI.SetActive(true);
         }
     }
     public void OffPauseUI()
     {
+        onpaulse = false;
         Time.timeScale = 1;
         pause_UI.SetActive(false);
     }
