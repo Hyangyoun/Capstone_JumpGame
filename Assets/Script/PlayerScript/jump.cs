@@ -105,6 +105,7 @@ public class jump : MonoBehaviour
             StartCoroutine(playerhp.Infinity());
             if (HP.hp <= 0)
             {
+                anim.SetTrigger("Hit");
                 Time.timeScale = 0;
                 StartCoroutine(Resetcounter());
             }
