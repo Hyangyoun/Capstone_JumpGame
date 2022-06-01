@@ -36,6 +36,9 @@ public class jump : MonoBehaviour
 
     private Animator anim;
     private SpriteRenderer spr;
+    public GameObject gameover; // 게임오버 UI 오브젝트
+
+    private bool gameStart = false; // 애니메이션 버그 대응 변수
 
     void Start()
     {
@@ -81,15 +84,24 @@ public class jump : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision) // 콜라이더 충돌
     {
-        if (collision.gameObject.tag == "Wall") // Wall 태그를 가지고있는 오브젝트에 부딛혔을때 실행되는 함수
+        if (collision.gameObject.tag.Equals("Wall")) // Wall 태그를 가지고있는 오브젝트에 부딛혔을때 실행되는 함수
         {
             rg.velocity = Vector2.zero;
             rg.gravityScale = 0.0f;
             right_left = !right_left;
             onWall = true;
             spr.flipX = !spr.flipX;
+            gameStart = true;
             anim.SetTrigger("Grap");
             wallTimer = StartCoroutine(Walltimer()); // 벽에 일정시간 붙을수 있게 도와주는 코루틴 실행과 동시에 코루틴 변수 초기화
+        }
+
+        if (collision.gameObject.tag.Equals("flat"))
+        {
+            if (gameStart)
+            {
+                anim.SetTrigger("Idle");
+            }
         }
     }
 
@@ -106,19 +118,19 @@ public class jump : MonoBehaviour
             if (HP.hp <= 0)
             {
                 anim.SetTrigger("Hit");
+                gameover.SetActive(true);
                 Time.timeScale = 0;
-                StartCoroutine(Resetcounter());
             }
+        }
+
+        if (collision.gameObject.tag.Equals("MainCamera"))
+        {
+            anim.SetTrigger("Hit");
+            gameover.SetActive(true);
+            Time.timeScale = 0;
         }
     }
 
-    private IEnumerator Resetcounter() // 재시작 카운터 코루틴
-    {
-        yield return new WaitForSecondsRealtime(5f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        HP.hp = 3;
-        Time.timeScale = 1;
-    }
     private IEnumerator Infinity() // 피격시 투명처리 코루틴
     {
         spr.color = new Color(255, 255, 255, 0.5f);

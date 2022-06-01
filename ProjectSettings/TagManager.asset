@@ -8,6 +8,7 @@ TagManager:
   - CTrigger
   - Saw
   - SawTrigger
+  - flat
   layers:
   - Default
   - TransparentFX

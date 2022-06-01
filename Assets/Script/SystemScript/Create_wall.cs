@@ -7,11 +7,11 @@ public class Create_wall : MonoBehaviour
     public GameObject wall;
     public GameObject sawL;
     public GameObject sawR;
-    private float posY = 12.0f;
+    private float posY = 17.5f;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
