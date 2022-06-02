@@ -7,6 +7,8 @@ public class Create_wall : MonoBehaviour
     public GameObject wall;
     public GameObject sawL;
     public GameObject sawR;
+    public GameObject backGround;
+    private float posY_Back = 61.675f;
     private float posY = 17.5f;
     // Start is called before the first frame update
     void Start()
@@ -29,6 +31,12 @@ public class Create_wall : MonoBehaviour
             Instantiate(sawR, new Vector2(Random.Range(-2f, 2f), Random.Range(posY + 1, posY + 5)), Quaternion.identity);
             Destroy(collision.gameObject);
             posY += 12.0f;
+        }
+
+        if (collision.gameObject.tag.Equals("Respawn"))
+        {
+            Instantiate(backGround, new Vector2(0, posY_Back), Quaternion.identity);
+            posY_Back += 25.35f;
         }
     }
 }
