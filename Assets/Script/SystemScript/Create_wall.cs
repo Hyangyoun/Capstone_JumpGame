@@ -36,6 +36,7 @@ public class Create_wall : MonoBehaviour
         if (collision.gameObject.tag.Equals("Respawn"))
         {
             Instantiate(backGround, new Vector2(0, posY_Back), Quaternion.identity);
+            Destroy(collision.gameObject);
             posY_Back += 25.35f;
         }
     }

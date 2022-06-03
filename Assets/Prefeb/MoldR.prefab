@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 2038889023883094798}
   - component: {fileID: 2038889023883094797}
   - component: {fileID: 2038889023883094796}
-  - component: {fileID: 2038889023883094795}
   - component: {fileID: 1803524195772186758}
-  - component: {fileID: -2008416512284623741}
+  - component: {fileID: 8039017003471618425}
+  - component: {fileID: -760922218026251075}
   m_Layer: 0
-  m_Name: SawL
+  m_Name: MoldR
   m_TagString: Saw
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -103,21 +103,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.22
---- !u!114 &2038889023883094795
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2038889023883094794}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec1dfff51e20b5b4586acc746e6a138a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minPos: 3
-  maxPos: 3
+  m_Radius: 0.2
 --- !u!114 &1803524195772186758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,7 +116,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4819303201c7179449d0882ae3d99f43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!50 &-2008416512284623741
+--- !u!114 &8039017003471618425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038889023883094794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c927c64c88808044f836d3b0be37912f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minPos: 3
+  maxPos: 3
+--- !u!50 &-760922218026251075
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
