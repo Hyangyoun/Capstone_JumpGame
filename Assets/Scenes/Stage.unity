@@ -294,8 +294,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 545bc1eadbce5664b97da2db29df3c07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: {x: 10, y: 10}
-  force2: {x: -10, y: 10}
+  force: {x: 9, y: 10}
+  force2: {x: -9, y: 10}
   onWall: 1
   right_left: 0
   gameover: {fileID: 1543748226}

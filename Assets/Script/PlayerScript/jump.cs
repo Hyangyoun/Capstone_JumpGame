@@ -140,7 +140,7 @@ public class jump : MonoBehaviour
 
     private IEnumerator Walltimer() // 벽에 일정시간 매달리는 코루틴
     {
-        yield return new WaitForSeconds(0.5f); // 벽에 매달리는 시간(추후 수정시 수치조정만 하면됨)
+        yield return new WaitForSeconds(0.3f); // 벽에 매달리는 시간(추후 수정시 수치조정만 하면됨)
         rg.gravityScale = 0.5f; // 중력값을 복구하여 캐릭터를 떨어지게 만듬
     }
 }

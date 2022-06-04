@@ -128,8 +128,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c927c64c88808044f836d3b0be37912f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minPos: 3
-  maxPos: 3
+  minPos: 2
+  maxPos: 2
 --- !u!50 &-760922218026251075
 Rigidbody2D:
   serializedVersion: 4
