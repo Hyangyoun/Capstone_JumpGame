@@ -57,7 +57,11 @@ public class jump : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && onWall) // 클릭시에 벽에 닿았는지 여부와 UI클릭시 중복클릭 방지
         {
-            if (!EventSystem.current.IsPointerOverGameObject())
+            if (EventSystem.current.IsPointerOverGameObject(0))
+            {
+                return;
+            }
+            else
             {
                 rg.velocity = Vector2.zero; // 물리수치가 합연산 되는걸 막기위한 이동값 초기화
                 anim.SetTrigger("Jump");

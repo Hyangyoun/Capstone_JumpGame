@@ -12,6 +12,7 @@ public class UI_Manager : MonoBehaviour
     private void Awake()
     {
         Time.timeScale = 0;
+        Application.targetFrameRate = 60;
     }
 
     public void GameStart()
